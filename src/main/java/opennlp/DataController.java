@@ -11,8 +11,6 @@ import opennlp.tools.util.Span;
 @RestController
 public class DataController {
 
-    private static final String template = "Hello, %s!";
-
     @PostMapping("/opennlp_ner")
     public List<Span> getdata(@RequestBody Data data) throws IOException {
         return (new OpenNLPner()).getPersons(data.getText());
