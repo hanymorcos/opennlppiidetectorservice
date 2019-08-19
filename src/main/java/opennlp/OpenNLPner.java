@@ -20,7 +20,7 @@ class OpenNLPner
         .tokenize(content);
     
         InputStream inputStreamNameFinder = getClass()
-        .getResourceAsStream("/models/en-ner-person.bin");
+        .getResourceAsStream("/en-ner-person.bin");
         TokenNameFinderModel model = new TokenNameFinderModel(
         inputStreamNameFinder);
         NameFinderME nameFinderME = new NameFinderME(model);
